@@ -20,7 +20,7 @@ pub fn parse<T: BufRead + Sized>(mut data: T) {
 
         for i in 0..LINE_SIZE {
             print!("{:02x} ", buffer[i]);
-            if i % 8 == 0 && i != 0 {
+            if (i + 1) % 8 == 0 && i != 0 {
                 print!(" ");
             }
         }
