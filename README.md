@@ -3,7 +3,7 @@ hexdump clone implementation, based on [Chapter 7](https://livebook.manning.com/
 
 ## Usage
 
-Get information from STDIN and display information similar to hexdump -C
+Get data from STDIN and display information similar to hexdump -C
 
 <pre><font color="#A6E22E"><b>➜  </b></font><font color="#A1EFE4"><b>release</b></font> <font color="#66D9EF"><b>git:(</b></font><font color="#F92672"><b>master</b></font><font color="#66D9EF"><b>)</b></font> head rust_reader | ./rust_reader
 [0000000000000000] 7f 45 4c 46 02 01 01 00  00 00 00 00 00 00 00 00   |.ELF............|
