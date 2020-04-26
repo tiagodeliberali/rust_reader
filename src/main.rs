@@ -45,3 +45,17 @@ fn build_content(buffer: &[u8]) -> String {
 
     content.join("")
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn get_match_positions() {
+        let content = String::from("y̆es");
+
+        let matches: Vec<_> = content.match_indices(char::is_alphanumeric).collect();
+
+        assert_eq!(matches, [(0, "y"), (3, "e"), (4, "s")]);
+    }
+}
