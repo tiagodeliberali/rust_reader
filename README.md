@@ -38,5 +38,6 @@ String::from_utf8_lossy(&buffer).match_indices(char::is_alphanumeric)
 </pre>
 
 And, sometimes, the index returned by this function is greater than 16, so we display it in the supplied position.
+
 As long as I understood, it happens due to the fact char positions, in Rust, do not reflect char as we expect to see. So,
 as we can see in documentation [here](https://doc.rust-lang.org/std/string/struct.String.html#method.chars), a character like 'y̆' can occupy multiple char positions, moving indexes of next chars to the right.
